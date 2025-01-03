@@ -64,10 +64,27 @@ func main() {
 	// Iterate over the slice and call the methods
 	// here _ is used as we dont need the index, the 1st value is the index and the 2nd value is the shape
 	for index, shape := range shapes {
-		if index == 0 {fmt.Println("Circle")
-		} else if index == 1 {fmt.Println("Rectangle")
-		} else {fmt.Println("Square")}
+		if index == 0 {
+			fmt.Println("Circle")
+		} else if index == 1 {
+			fmt.Println("Rectangle")
+		} else {
+			fmt.Println("Square")
+		}
 		fmt.Println("Area:", shape.area())
 		fmt.Println("Perimeter:", shape.perimeter())
+
+	}
+
+	for _, shape := range shapes {
+		circle, ok := shape.(Circle)
+		if ok {
+			fmt.Println("This is a Circle:", circle)
+		}
+
+		square, ok := shape.(Square)
+		if ok{
+			fmt.Println(square)
+		}
 	}
 }

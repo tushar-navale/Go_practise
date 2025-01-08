@@ -83,8 +83,24 @@ func main() {
 		}
 
 		square, ok := shape.(Square)
-		if ok{
+		if ok {
 			fmt.Println(square)
 		}
 	}
+
+
+	//learning switch case
+	for _, shape := range shapes {
+		switch s := shape.(type) {
+		case Circle:
+			fmt.Println(s.area())
+		case Rectangle:
+			fmt.Println(s.area())
+		case Square:
+			fmt.Println(s.area())
+		default:
+			fmt.Println("invalid shape")
+		}
+	}
+
 }

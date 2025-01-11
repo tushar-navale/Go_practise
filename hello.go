@@ -15,10 +15,10 @@ func main() {
 	ptra := &a
 	fmt.Println(ptra)
 
-	//var ptrb *int 
-	if(ptra != nil){
+	//var ptrb *int
+	if ptra != nil {
 		fmt.Println("its not null/nil")
-	} else {								// the else statement should be right after the closing bracket of the if statement
+	} else { // the else statement should be right after the closing bracket of the if statement
 		fmt.Println("its null/nil")
 	}
 
@@ -33,5 +33,9 @@ func main() {
 
 	var e float32
 	fmt.Println(e) // if no value is assigned, it will be assigned the zero value of the type
+
+	e = 3.14
+
+	fmt.Printf("the value of PI is %f", e)
 
 }

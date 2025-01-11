@@ -26,6 +26,6 @@ func main() {
 
 	final_gpa := total_gpa / total_credits
 
-	fmt.Println("The final gpa is: ", final_gpa)
+	fmt.Printf("The final gpa is: %.2f", final_gpa)
 
 }
